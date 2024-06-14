@@ -196,6 +196,14 @@
     opacity: 0.5;
 }
 
+@supports ((text-stroke: 1px var(--bg-color, #000000)) or (-webkit-text-stroke: 1px var(--bg-color, #000000))) {
+    .cards__item-tag {
+        -webkit-text-stroke: 1px var(--bg-color, #000000);
+        text-stroke: 1px var(--bg-color, #000000);
+        text-shadow: none;
+    }
+}
+
 .cards__item-text {
     padding: 31px 25px 24px;
     font-size: 18px;
