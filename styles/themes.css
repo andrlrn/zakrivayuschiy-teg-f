@@ -10,17 +10,8 @@
     @layer default, light, dark;
 
     @layer default {
-        :root {
-            --main-color: #00CC14;
-            --bg-color: #000000;
-            --wght-regular: 465;
-            --wght-bold: 785;
-            --main-gradient: repeating-linear-gradient(to right, #000000 0 2px, transparent 2px 4px),
-            repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
-            linear-gradient(to bottom, #007f0c 0.01%, #004306);
-        }
         .button::after {
-            background: var(--main-color);
+            background: var(--button-bg-color);
         }
     }
 
@@ -28,23 +19,28 @@
         :root.theme-light {
             --main-color: #000000;
             --bg-color: #ffffff;
+            --button-bg-color: #ffffff;
             --wght-regular: 400;
             --wght-bold: 700;
             --main-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
         }
         .button::after {
-            background: var(--bg-color);
+            background: var(--button-bg-color);
         }
     }
     @layer dark {
         :root.theme-dark {
             --main-color: #00CC14;
             --bg-color: #000000;
+            --button-bg-color: #00CC14;
             --wght-regular: 465;
             --wght-bold: 785;
             --main-gradient: repeating-linear-gradient(to right, #000000 0 2px, transparent 2px 4px),
             repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
             linear-gradient(to bottom, #007f0c 0.01%, #004306);
+        }
+        .button::after {
+            background: var(--button-bg-color);
         }
     }
 }
@@ -55,12 +51,13 @@
         :root {
             --main-color: #000000;
             --bg-color: #ffffff;
+            --button-bg-color: #ffffff;
             --wght-regular: 400;
             --wght-bold: 700;
             --main-gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
         }
         .button::after {
-            background: var(--bg-color);
+            background: var(--button-bg-color);
         }
     }
 }

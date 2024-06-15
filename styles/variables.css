@@ -1,5 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root {
-    --main-font: 'Inter', sans-serif;
-    --accent-font: 'PressStart2P', fantasy;
+@layer default {
+    :root {
+        --main-font: 'Inter', sans-serif;
+        --accent-font: 'PressStart2P', fantasy;
+        --main-color: #00CC14;
+        --bg-color: #000000;
+        --like-color: red;
+        --wght-regular: 465;
+        --wght-bold: 785;
+        --main-gradient: repeating-linear-gradient(to right, #000000 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    }
 }

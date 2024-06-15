@@ -29,7 +29,7 @@
     }
 
     to {
-        scale: 1.5;
+        scale: 1.15;
     }
 }
 
@@ -41,4 +41,48 @@
     100% {
         opacity: 1;
     }
+}
+
+.like-icon .main,
+.like-icon .core {
+    fill: transparent;
+}
+
+.like-icon .contour {
+    fill: var(--main-color);
+}
+
+.like-icon .sparks {
+    opacity: 0;
+    fill: var(--like-color);
+}
+
+.like-icon:hover .core {
+    fill: var(--main-color);
+    transition: fill .3s .03s linear;
+}
+
+.like-icon:hover .main {
+    fill: var(--main-color);
+    transition: fill .3s .05s linear;
+}
+
+.like-icon.is-liked {
+    animation: is-scale 1 .3s .1s ease-in alternate;
+    transform-origin: center;
+}
+
+.like-icon.is-liked .main,
+.like-icon.is-liked .contour,
+.like-icon.is-liked .core {
+    fill: var(--like-color);
+}
+
+.like-icon.is-liked .sparks {
+    animation: is-visible 1 .3s .3s ease-in alternate;
+}
+
+.like-icon:active .main,
+.like-icon:active .core {
+    fill: var(--like-color);
 }
