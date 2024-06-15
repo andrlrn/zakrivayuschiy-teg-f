@@ -108,7 +108,7 @@
     background-color: var(--main-color);
 }
 
-.theme-menu__button:focus-visible {
+.theme-menu__button:is(:focus-visible, :hover) {
     opacity: 0.6;
 }
 
